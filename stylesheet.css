@@ -19,7 +19,7 @@
 .header{
     display: block;
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: var(--bright-red) ;
+    background-color: var(--bright-red);
     color: white;
     justify-content: center;
     text-align: center;
@@ -33,11 +33,15 @@ color: white;
 font-size: 1.5rem;
 }
 
+a:hover {
+color: #1A2734;
+transition: 0.3s;
+}
+
 
 h2 {
+    font-family:'Noto Sans JP', sans-serif;
     padding: 1rem;
-    text-align: center;
-    text-decoration: underline var(--bright-red);
     text-align: center;
 }
 
@@ -98,7 +102,6 @@ img {
 
     .detailsBox {
         display: flex;
-  
         width: 60%;
     }
 
@@ -108,8 +111,8 @@ img {
 
     .header{
         justify-content: end;
-        text-align: right;
-        margin: 2rem 0;
+        text-align: center;
+        margin: 1.5rem auto;
         padding: 1.5rem;
         width: 40%;
     }  
