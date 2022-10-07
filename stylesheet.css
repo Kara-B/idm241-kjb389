@@ -38,6 +38,12 @@ color: #1A2734;
 transition: 0.3s;
 }
 
+p {
+    font-family: Iowan-Old-Style;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: .5rem;
+}
 
 h2 {
     font-family:'Noto Sans JP', sans-serif;
@@ -101,8 +107,8 @@ img {
     }
 
     .detailsBox {
-        display: flex;
-        width: 60%;
+        display: grid;
+        width: 70%;
     }
 
 }
