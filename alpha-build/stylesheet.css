@@ -1,0 +1,199 @@
+
+@font-face {
+    font-family: Iowan-Old-Style;
+    src: url(../alpha/fonts/Iowan-Old-Style.woff2) format('woff2');
+    font-weight: normal ;
+    font-size: normal;
+}
+
+:root {
+    --bright-red: #CF021A ;
+    --navy-blue: #1A2734;
+}
+
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    color: #1A2734;
+    transition: 0.3s;
+}
+
+.header{
+    background-color: var(--bright-red);
+    color: white;
+    justify-content: end;
+    text-align: center;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    width: 100%;
+}  
+
+.recipeSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recipeCard {
+    cursor: pointer;
+    display: block;
+    box-shadow: 0 0 10px 0 rgba(50,50,50,.15);
+    margin: 0 20px 40px 0;
+    width: 350px;
+}
+
+.recipeImage_container {
+    position: relative;
+}
+
+.recipeImage {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(207, 2, 26, 0.8);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    z-index: 100;
+}
+
+.recipeDescription {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    margin: auto -2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.recipeCard:hover .recipeImage {
+    filter: brightness(.5);
+   
+}
+.recipeCard:hover .overlay {
+    height: 50%;
+}
+
+.recipeName {
+    padding: 10px;
+    line-height: 1.25;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.rating {
+    font-family: Iowan-Old-Style;
+    font-size: 15px;
+    margin: 1rem .5rem;
+    padding: 0;
+}
+
+.redDivider{
+    border-top: 4px solid var(--bright-red);
+    margin: 1.5rem auto;
+    width: 80%;
+}
+
+a {
+    color: white;
+    font-size: 1.5rem;
+}
+    
+    a:hover {
+    color: #1A2734;
+    transition: 0.3s;
+}
+    
+p {
+    font-family: Iowan-Old-Style;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: .5rem;
+}
+    
+h2 {
+    font-family:'Noto Sans JP', sans-serif;
+    padding: 1rem;
+    text-align: center;
+}
+    
+.detailsBox h2 {
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.interactionDetails {
+    display: block;
+}
+
+.detailsBox {
+    align-items: center;
+    border: 4px solid var(--navy-blue);
+    display: block;
+    margin: 1rem auto;
+    width: 75%;
+}
+
+.detailsBox li {
+    font-family: Iowan-Old-Style ;
+    font-size: 1.2rem;
+    padding: 1rem; 
+    margin: .5rem;
+}
+    
+
+@media only screen and (min-width: 700px) {
+    .header{
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+    }
+
+    .detailsBox {
+        display: grid;
+        width: 70%;
+    } 
+
+}
+
+  @media only screen and (min-width: 1200px) {
+
+    .header{
+        justify-content: end;
+        text-align: center;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        width: 40%;
+    }  
+
+    .detailsBox {
+        display: block;
+        margin: 1rem;
+        min-height: 200px;
+        width: 300px;
+    }
+
+    .interactionDetails {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+
+}

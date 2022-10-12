@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Kara Butler: IDM214 Alpha Build</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1> Microinteraction: Alpha </h1>
+        <a target="_blank" href="https://www.justonecookbook.com"> Just One Cookbook </a>
+    </div>
+
+    <h2> Interaction: Hovering over a Recipe Card </h2>
+
+    <div class="recipeSection">
+        <div class="recipeCard">
+            <div class= "recipeImage_container">  
+                <div class="overlay">
+                    <p class="recipeDescription"> Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                </div>
+                <img class="recipeImage" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
+            </div>
+           
+            <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
+            <p class="rating"> 4.7 ★★★★★  (438)</p>
+        </div>
+
+        <div class="recipeCard">
+            <div class= "recipeImage_container">  
+                <div class="overlay">
+                    <p class="recipeDescription"> Whether you call it Japanese Mayonnaise or Kewpie Mayo, once you try it, you’ll never go back. Japanese Mayonnaise has a rich egg flavor, a tangy and sweet taste, and is creamier in both color and texture than regular mayonnaise.</p>
+                </div>
+                <img class="recipeImage" src="https://www.justonecookbook.com/wp-content/uploads/2022/01/Japanese-Mayonnaise-Kewpie-Mayo-9057-III-400x600.jpg" alt="A mason jar full of Kewpie Mayo">
+            </div>
+           
+            <h2 class="recipeName"> How to Make Japanese Mayonnaise (Kewpie Mayo) マヨネーズ </h2>
+            <p class="rating"> 4.93 ★★★★★  (514)</p>
+        </div>
+
+        <div class="recipeCard">
+            <div class="recipeImage_container">               
+                 <div class="overlay">
+                    <p class="recipeDescription"> Use this quick and easy Teriyaki Salmon recipe to make a light and savory meal any night of the week. Salmon fillets are pan-grilled to tender perfection in the traditional method and finished with an authentic homemade teriyaki sauce.</p>
+                </div>
+                <img class="recipeImage" src="https://www.justonecookbook.com/wp-content/uploads/2022/03/Teriyaki-Salmon-6954-III-400x600.jpg" alt="A piece of teriyaki salmon on a plate garnished with greens">
+            </div>
+            
+            <h2 class="recipeName"> Teriyaki Salmon (Video) 鮭の照り焼き </h2>
+            <p class="rating"> 4.81 ★★★★★  (304)</p>
+        </div>
+    </div>
+
+    <div class="redDivider"> </div>
+    
+    <div class="interactionDetails">
+        <div class="detailsBox">
+            <h2>Trigger</h2>
+            <ul>
+                <li> Cursor hovers over recipe card</li>
+                <li> Cursor hovers off of recipe card</li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Rules </h2>
+            <p> Hover On</p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> Recipe image has .5s fade to dark grey filter with 50% opacity </li>
+                <li> Recipe description with red, transparent background slides up from bottom for .5s over the darkened image </li>
+            </ul>
+            <p> Hover Off </p>
+            <ul>
+                <li> Pointer turns to cursor</li>
+                <li> Recipe description and background slides downwards out of sight for .5s </li>
+                <li> Dark grey filter on recipe image fades to 0% opacity for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Feedback</h2>
+            <p> Hover On</p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> Recipe image has .5s fade to dark grey filter with 50% opacity </li>
+                <li> Recipe description with red, transparent background slides up from bottom for .5s over the darkened image </li>
+            </ul>
+            <p> Hover Off </p>
+            <ul>
+                <li> Pointer turns to cursor</li>
+                <li> Recipe description and background slides downwards out of sight for .5s </li>
+                <li> Dark grey filter on recipe image fades to 0% opacity for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Loops &amp; Modes</h2>
+            <p> Hover On</p>
+            <ul>
+                <li> Mode: Recipe description fades in for .5 seconds over the darkened image </li>
+                <li> No Loops </li>
+            </ul>
+            <p> Hover Off</p>
+            <ul>
+                <li>Mode: Recipe description and background slides downwards out of sight for .5s </li>
+                <li> No Loops </li>
+            </ul>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
