@@ -27,6 +27,12 @@ a:hover {
     transition: 0.3s;
 }
 
+h2 {
+    font-family:'Noto Sans JP', sans-serif;
+    padding: 1rem;
+    text-align: center;
+}
+
 .header{
     background-color: var(--bright-red);
     color: white;
@@ -48,7 +54,7 @@ a:hover {
     cursor: pointer;
     display: block;
     box-shadow: 0 0 10px 0 rgba(50,50,50,.15);
-    margin: 0 20px 40px 0;
+    margin: 1rem 20px ;
     width: 350px;
 }
 
@@ -76,7 +82,7 @@ a:hover {
 
 .recipeDescription {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: absolute;
     margin: auto -2rem;
     top: 50%;
@@ -96,6 +102,7 @@ a:hover {
     line-height: 1.25;
     margin: 0 auto;
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .rating {
@@ -105,6 +112,7 @@ a:hover {
     padding: 0;
 }
 
+/* Styles for the Bottom */
 .redDivider{
     border-top: 4px solid var(--bright-red);
     margin: 1.5rem auto;
@@ -128,12 +136,7 @@ p {
     margin: .5rem;
 }
     
-h2 {
-    font-family:'Noto Sans JP', sans-serif;
-    padding: 1rem;
-    text-align: center;
-}
-    
+
 .detailsBox h2 {
     background-color: var(--navy-blue);
     color: white;
@@ -157,7 +160,8 @@ h2 {
     padding: 1rem; 
     margin: .5rem;
 }
-    
+
+
 
 @media only screen and (min-width: 700px) {
     .header{
@@ -171,7 +175,15 @@ h2 {
         width: 70%;
     } 
 
+    recipeCard {
+        margin: 0 20px 50px 0;
+    }
+
+    .recipeDescription {
+        font-size: 1.2rem;
+    }
 }
+
 
   @media only screen and (min-width: 1200px) {
 
@@ -195,5 +207,9 @@ h2 {
         justify-content: space-evenly;
         align-items: center;
     } 
+
+    .recipeDescription {
+    font-size: 1.2rem;
+    }
 
 }
