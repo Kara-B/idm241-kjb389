@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="stylesheet.css">
+    <title> Kara Butler: IDM 214 Beta</title>
+</head>
+<body>
+    <div class="header">
+        <h1> Microinteraction: Beta </h1>
+        <a target="_blank" href="https://www.justonecookbook.com"> Just One Cookbook </a>
+    </div>
+    
+    <h2> Interaction: Save recipe icon appears, Save recipe icon is clicked </h2>
+    <div class="interactionDetails">
+        <div class="detailsBox">
+            <h2>Trigger</h2>
+            <ul>
+                <li> Cursor hovers over recipe card </li>
+                <li> Cursor hovers over save recipe icon </li>
+                <li> User clicks save recipe icon </li>
+                <li> Cursor hovers off of save recipe icon</li>
+                <li> Cursor hovers off of recipe card</li> 
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Rules </h2>
+            <p> On Hover Card</p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> Save recipe icon fades in for .5s </li>
+            </ul>
+            <p> On Hover over Save Recipe Icon </p>
+            <ul>
+                <li> The text prompt “save” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+            <p> On click over Save Recipe Icon </p>
+            <ul>
+                <li> Bookmark stretches down from the top of the card for 1s to cover the save icon </li>
+                <li> Once covered, icon background color immediately changes to red. At the same time, Icon changes to white </li>
+                <li> Once covered, text prompt changes from save, to saved </li>
+                <li> Bookmark snaps back to the top to the top of the card for .3s </li>
+                <li> The recipe is added to the users list of saved recipes  </li>
+            </ul>
+            <p> On Hover Off Save Recipe Icon</p>
+            <ul>
+                <li> The text prompt “save” fades out for .2s below the icon </li>
+                <li> The red box shadow on the icon fades away for .2 seconds </li>
+            </ul>
+
+            <p> On Hover Off Recipe Card</p>
+            <ul>
+                <li> Pointer turns to cursor </li>
+                <li> Save recipe icon fades out for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Feedback</h2>
+            <p> On Hover Card</p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> Save recipe icon fades in for .5s </li>
+            </ul>
+            <p> On Hover over Save Recipe Icon </p>
+            <ul>
+                <li> The text prompt “save” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+            <p> On click over Save Recipe Icon </p>
+            <ul>
+                <li> Bookmark stretches down from the top of the card for 1s to cover the save icon </li>
+                <li> Once covered, icon background color immediately changes to red. At the same time, Icon changes to white </li>
+                <li> Once covered, text prompt changes from save, to saved </li>
+                <li> Bookmark snaps back to the top to the top of the card for .3s </li>
+                <li> The recipe is added to the users list of saved recipes  </li>
+            </ul>
+            <p> On Hover Off Save Recipe Icon</p>
+            <ul>
+                <li> The text prompt “save” fades out for .2s below the icon </li>
+                <li> The red box shadow on the icon fades away for .2 seconds </li>
+            </ul>
+
+            <p> On Hover Off Recipe Card</p>
+            <ul>
+                <li> Pointer turns to cursor </li>
+                <li> Save recipe icon fades out for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Loops &amp; Modes</h2>
+            <p> On Hover Card</p>
+            <ul>
+                <li> Save recipe icon fades in for .5s </li>
+                <li> No Loops </li>
+            </ul>
+            <p> On Hover over Save Recipe Icon</p>
+            <ul>
+                <li> The text prompt “save” fades in for .2s below the icon </li>
+                <li> No Loops </li>
+            </ul>
+        </div>
+
+    </div>
+    
+    <div class="redDivider"> </div>
+
+    <div class="imageGrid">
+        <img src="images/beta1.png" alt="A Recipe Card from Just One Cookbook">
+        <img src="images/beta2.png" alt="Recipe Card with the image of the food slightly darkened">
+        <img src="images/beta3.png" alt="Recipe Card with save recipe icon beginning to fade in" >
+        <img src="images/beta4.png" alt="Recipe Card with description and save recipe icon fully opaque ">
+        <img src="images/beta5.png" alt="Cursor hovering over save recipe icon, save text is appearing below the icon">
+        <img src="images/beta6.png" alt="Cursor hovering over save recipe icon, box shadow appears, save text">
+        <img src="images/beta7.png" alt="A red Bookmark comes halfway down over the save recipe icon">
+        <img src="images/beta8.png" alt="A red Boomarks streteches down full over the save recipe icon">
+        <img src="images/beta9.png" alt="A red Bookmark comes halfway down over the save recipe icon">
+        <img src="images/beta10.png" alt="The saved recipe icon reads saved, the icon has changed to a red background with white text">
+    </div>
+   
+   
+</body>
+</html>
