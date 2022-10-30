@@ -90,6 +90,7 @@ img {
 .imageGrid {
     display: grid;
     justify-items: center;
+    column-width: 400px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -104,6 +105,7 @@ img {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         justify-items: center;
+        column-width: 400px;
     }
 
     .detailsBox {
@@ -124,8 +126,8 @@ img {
     }  
 
     .imageGrid {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
     }
 
     .detailsBox {
