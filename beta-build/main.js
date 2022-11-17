@@ -46,7 +46,7 @@ saveButton.addEventListener('click', function() {
         saveState.textContent = 'Saved!'
         changeToSavedIcon();
     }
-    saveState.classList.toggle = ('recipeSaved')
+    saveState.classList.toggle = ("recipeSaved");
     }
 
     setTimeout(changeSaveStatus, 500);
