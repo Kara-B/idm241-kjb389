@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>IDM241: Final Build</title>
+</head>
+<body>
+
+    <div class="header">
+        <h1> Microinteraction: Final </h1>
+        <a target="_blank" href="https://www.justonecookbook.com"> Just One Cookbook </a>
+    </div>
+
+    <h2> Interaction: Hover over Recipe Card, Save a Recipe, View Nutritional Information </h2>
+
+    <!-- Interaction Starts -->
+
+    <div class="recipeSection">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="recipeCard">
+                <div class= "recipeImage_container">  
+                    <div class="overlay">
+                        <p class="recipeDescription"> Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
+                    </div>
+                    <div class="saveRecipe">
+                        <div class="bookmarkAnimation"> 
+                            <img id="js-bookmark-animation" src="images/bookmark_stretch_static.png">
+                        </div>
+                        <img class="saveRecipeIcon js-save-button" src="images/save-recipe-icon.svg">
+                        <div class="textSave"> 
+                            <p class="js-save-state"> Save </p>
+                        </div>
+                    </div>
+    
+                    <div class="viewNutritionalInfo">
+                        <img id="js-nutritional-info-icon" class="nutritionalInfoIcon" src="images/nutritional-information-icon-02.png">
+                        <div class="textNutrition"> 
+                            <p class="nutritionalIcontext js-information-state"> Nutritional Info </p>
+                        </div>
+                    </div>
+                    <img class="recipeImage" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
+                </div>
+               
+                <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
+                <p class="rating"> 4.7 ★★★★★  (438)</p>
+            </div>
+          </div>
+
+          <div class="flip-card-back">
+            <div class="recipeCard">
+                <div class= "recipeImage_container">  
+
+                    <div class="nutritionalInformation">
+                        <h2> 725 Calories </h2>
+                        <h2> 643mg Sodium </h2>
+                        <h2> 642g Carbohydrates </h2>
+                        <h2> 12g Sugar </h2>
+                        <h4> Contains: Gluten, Eggs, Meat </h4>
+                    </div>
+    
+                    <div class="viewNutritionalInfo">
+                        <img id="js-backButton" class="backButton nutritionalInfoIcon" src="images/back_button-02.png">
+                        <div class="textNutrition"> 
+                            <p class="nutritionalIconback"> Back </p>
+                        </div>
+                    </div>
+                    <img class="recipeImageBack" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
+                </div>
+               
+                <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
+                <p class="rating"> 4.7 ★★★★★  (438)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <p class="imageCredit"> &copy; All food images used are property of justonecookbook.com </p>
+
+    <div class="redDivider"> </div>
+
+    <!-- Interaction Description Starts -->
+    
+    <div class="interactionDetails">
+        <div class="detailsBox">
+            <h2>Trigger</h2>
+            <ul>
+                <li> Hover on/off recipe card </li>
+                <li> Hover on/off save recipe icon </li>
+                <li> User clicks save recipe icon </li>
+                <li> Hover on/off nutrional information icon </li>
+                <li> User click nutritional information icon </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Rules </h2>
+            <p> Hover over Recipe Card</p>
+            <ul>
+                <li> Recipe image has .5s fade to dark grey filter with 50% opacity </li>
+                <li> Recipe description with red, transparent background slides up from bottom for .5s over the darkened image </li>
+                <li> Save recipe icon fades in for .5s </li>
+                <li> Nutritional information icon fades in for .5s </li>
+            </ul>
+            <p> Hover over Save Recipe Icon </p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> The text prompt “save” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+            <p> Click on Save Recipe Icon </p>
+            <ul>
+                <li> Bookmark stretches down from the top of the card for 1s to cover the save icon </li>
+                <li> Once covered, icon background color immediately changes to red. At the same time, Icon changes to white </li>
+                <li> Once covered, text prompt changes from save, to saved </li>
+                <li> Bookmark snaps back to the top to the top of the card for .3s </li>
+                <li> The recipe is added to the users list of saved recipes  </li>
+            </ul>
+            <p> Hover Off Save Recipe Icon</p>
+            <ul>
+                <li> The text prompt “save” fades out for .2s below the icon </li>
+                <li> The red box shadow on the icon fades away for .2 seconds </li>
+            </ul>
+            <p> Hover on Nutritional Information icon </p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> The text “Nutritional Information” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+
+            </ul>
+            <p> Click on Nutritional Information Icon </p>
+            <ul>
+                <li> Recipe card flips on its vertical axis for .3s to show a darkened food image and nutritional information </li>
+                <li> Nutritional information icon switches to a back arrow </li>
+            </ul>
+            <p> Hover off Nutritional Information icon </p>
+            <ul>
+                <li> The text “Nutritional Information” fades out for .2s below the icon </li>
+                <li> the red box shadow fades out for .2 seconds </li>
+            </ul>
+            <p> Hover Off Recipe Card</p>
+            <ul>
+                <li> Save recipe icon fades out for .5s </li>
+                <li> Nutritional information recipe icon fades out for .5s </li>
+                <li> Recipe description and background slides downwards out of sight for .5s </li>
+                <li> Dark grey filter on recipe image fades to 0% opacity for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Feedback</h2>
+            <p> Hover over Recipe Card</p>
+            <ul>
+               <li> Recipe image has .5s fade to dark grey filter with 50% opacity </li>
+                <li> Recipe description with red, transparent background slides up from bottom for .5s over the darkened image </li>
+                <li> Save recipe icon fades in for .5s </li>
+                <li> Nutritional information icon fades in for .5s </li>
+            </ul>
+            <p> Hover over Save Recipe Icon </p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> The text prompt “save” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+            <p> Click on Save Recipe Icon </p>
+            <ul>
+                <li> Bookmark stretches down from the top of the card for 1s to cover the save icon </li>
+                <li> Once covered, icon background color immediately changes to red. At the same time, Icon changes to white </li>
+                <li> Once covered, text prompt changes from save, to saved </li>
+                <li> Bookmark snaps back to the top to the top of the card for .3s </li>
+            </ul>
+            <p> Hover Off Save Recipe Icon</p>
+            <ul>
+                <li> Pointer turns to cursor</li>
+                <li> The text prompt “save” fades out for .2s below the icon </li>
+                <li> The red box shadow on the icon fades away for .2 seconds </li>
+            </ul>
+            <p> Hover on Nutritional Information icon </p>
+            <ul>
+                <li> Cursor turns to pointer</li>
+                <li> The text “Nutritional Information” fades in for .2s below the icon </li>
+                <li> A small red box shadow fades in behind the icon for .2 seconds </li>
+            </ul>
+            <p> Click on Nutritional Information Icon </p>
+            <ul>
+                <li> Recipe card flips on its vertical axis for .3s to show a darkened food image and nutritional information </li>
+                <li> Nutritional information icon switches to a back arrow </li>
+            </ul>
+            <p> Hover off Nutritional Information icon </p>
+            <ul>
+                <li> Pointer turns to cursor</li>
+                <li> The text “Nutritional Information” fades out for .2s below the icon </li>
+                <li> the red box shadow fades out for .2 seconds </li>
+            </ul>
+
+            <p> Hover Off Recipe Card</p>
+            <ul>
+                <li> Save recipe icon fades out for .5s </li>
+                <li> Nutritional information recipe icon fades out for .5s </li>
+                <li> Recipe description and background slides downwards out of sight for .5s </li>
+                <li> Dark grey filter on recipe image fades to 0% opacity for .5s </li>
+            </ul>
+        </div>
+
+        <div class="detailsBox">
+            <h2> Loops &amp; Modes</h2>
+            <p> Hover over Recipe Card</p>
+            <ul>
+                <li> Mode: Recipe description with red, transparent background slides up from bottom for .5s over the darkened image </li>
+                <li> Mode: Recipe description fades in for .5 seconds over the darkened image </li>
+                <li> No Loops </li>
+            </ul>
+            <p> Hover over Save Recipe Icon</p>
+            <ul>
+                <li> Mode: The text prompt “save” fades in for .2s below the icon </li>
+                <li> No Loops </li>
+            </ul>
+            <p> Hover over Nutritional Information Recipe Icon</p>
+            <ul>
+                <li> Mode: The text “Nutritional information” fades in for .2s below the icon </li>
+                <li> No Loops </li>
+            </ul>
+            <p> Click on Nutritional Information Icon </p>
+            <ul>
+                <li> Mode: Recipe card flips on its vertical axis for .3s to show a darkened food image and nutritional information </li>
+                <li> No Loops</li>
+            </ul>
+        </div>
+    </div>
+    <script src="main.js"></script> 
+</body>
+</html>
