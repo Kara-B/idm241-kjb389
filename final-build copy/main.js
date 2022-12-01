@@ -67,7 +67,13 @@ saveButton.addEventListener('click', function() {
       flipCard.classList.add("flip-card-anim");
     } 
 
+    function hideImage(){
+      const recipeImage = document.querySelector('.js-recipe-image-front');
+      recipeImage.classList.add("display-none");
+    }
+
     changeFlipCardClass();
+    setTimeout(hideImage, 300); 
 
   });
   
@@ -78,6 +84,12 @@ saveButton.addEventListener('click', function() {
       flipCard.classList.toggle("flip-card-anim");
     }
     changeFlipCardClassBack();
+    function showImage(){
+      const recipeImage = document.querySelector('.js-recipe-image-front');
+      recipeImage.classList.remove("display-none");
+    }
+
+    showImage();
 
   });
   
