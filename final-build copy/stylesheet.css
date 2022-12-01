@@ -58,12 +58,13 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto 0;
 }
 
 .recipeCard {
     display: block;
     box-shadow: 0 0 10px  rgba(76, 76, 76, 0.763);
-    margin: 1rem 20px ;
+    margin: 1rem 20px;
     width: 350px;
 }
 
@@ -137,6 +138,7 @@ p {
 .imageCredit {
     font-size: 1rem;
     text-align: center;
+    padding: 1rem;
 }
 
 
@@ -270,7 +272,7 @@ p {
 
 .flip-card {
     width: 300px;
-    height: 300px;
+    height: 642.5px;
     perspective: 1000px;
   }
 
@@ -311,6 +313,11 @@ p {
 
 
 /* Styles for the Bottom */
+
+.absoluteDiv {
+    position: absolute;
+    top: 115%;
+}
 .redDivider{
     border-top: 4px solid var(--bright-red);
     margin: 1.5rem auto;
