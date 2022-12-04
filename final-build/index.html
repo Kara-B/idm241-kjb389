@@ -22,41 +22,76 @@
     <!-- Interaction Starts -->
 
     <div class="recipeSection">
-        <div class="recipeCard">
-            <div class= "recipeImage_container">  
-                <div class="overlay">
-                    <p class="recipeDescription"> Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
-                </div>
-                <div class="saveRecipe">
-                    <div class="bookmarkAnimation"> 
-                        <img id="js-bookmark-animation" src="images/bookmark_stretch_static.png">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="recipeCard">
+                <div class= "recipeImage_container">  
+                    <div class="overlay">
+                        <p class="recipeDescription"> Popular street food from Osaka, Japan, Okonomiyaki is a savory version of Japanese pancake, made with flour, eggs, shredded cabbage, and your choice of protein, and topped with a variety of condiments.</p>
                     </div>
-                    <img class="saveRecipeIcon js-save-button" src="images/save-recipe-icon.svg">
-                    <div class="textSave"> 
-                        <p class="js-save-state"> Save </p>
+                    <div class="saveRecipe">
+                        <div class="bookmarkAnimation"> 
+                            <img id="js-bookmark-animation" src="images/bookmark_stretch_static.png">
+                        </div>
+                        <img class="saveRecipeIcon js-save-button" src="images/save-recipe-icon.svg">
+                        <div class="textSave"> 
+                            <p class="js-save-state"> Save </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="viewNutritionalInfo">
-                    <img class="js-nutritional-info-icon nutritionalInfoIcon" src="images/nutritional-information-icon-02.png">
-                    <div class="textNutrition"> 
-                        <p class="nutritionalIcontext js-information-state"> Nutritional Info </p>
+    
+                    <div class="viewNutritionalInfo">
+                        <img id="js-nutritional-info-icon" class="nutritionalInfoIcon" src="images/nutritional-information-icon-02.png">
+                        <div class="textNutrition"> 
+                            <p class="nutritionalIcontext js-information-state"> Nutritional Info </p>
+                        </div>
                     </div>
+                    <img class="recipeImage js-recipe-image-front" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
                 </div>
-                <img class="recipeImage" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
+               
+                <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
+                <p class="rating"> 4.7 ★★★★★  (438)</p>
             </div>
-           
-            <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
-            <p class="rating"> 4.7 ★★★★★  (438)</p>
-        </div>
-    </div>
-    <p class="imageCredit"> &copy; All food images used are property of justonecookbook.com </p>
+          </div>
 
-    <div class="redDivider"> </div>
+          <div class="flip-card-back">
+            <div class="recipeCard">
+                <div class= "recipeImage_container">  
+
+                    <div class="nutritionalInformation">
+                        <h2> 725 Calories </h2>
+                        <h2> 643mg Sodium </h2>
+                        <h2> 642g Carbohydrates </h2>
+                        <h2> 12g Sugar </h2>
+                        <h4> Contains: Gluten, Eggs, Meat </h4>
+                    </div>
+    
+                    <div class="viewNutritionalInfo">
+                        <img id="js-backButton" class="backButton nutritionalInfoIcon" src="images/back_button-02.png">
+                        <div class="textNutrition"> 
+                            <p class="nutritionalIconback"> Back </p>
+                        </div>
+                    </div>
+                    <img class="recipeImageBack" src="https://www.justonecookbook.com/wp-content/uploads/2020/03/Okonomiyaki-Recipe-5668-III-400x600.jpg" alt="A plate filled with okonomiyaki">
+                </div>
+               
+                <h2 class="recipeName"> Okonomiyaki Recipe (Video) お好み焼き </h2>
+                <p class="rating"> 4.7 ★★★★★  (438)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
 
     <!-- Interaction Description Starts -->
     
-    <div class="interactionDetails">
+    <div class="absoluteDiv"> 
+
+        <p class="imageCredit"> &copy; All food images used are property of justonecookbook.com</p>
+        <div class="redDivider"> </div>
+
+        <div class="interactionDetails">
         <div class="detailsBox">
             <h2>Trigger</h2>
             <ul>
@@ -203,6 +238,8 @@
             </ul>
         </div>
     </div>
+    </div>
+    
     <script src="main.js"></script> 
 </body>
 </html>

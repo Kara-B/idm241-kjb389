@@ -1,6 +1,6 @@
 // Step 1: Defining Variables
 // Have a variable for the button that is clicked, a button to store the text that changes, and a variable to control the bookmark animation being played
-
+console.log ("Script is loading")
   const saveButton = document.querySelector('.js-save-button')
   const saveState = document.querySelector('.js-save-state')
   const saveStateDiv = document.querySelector ('.textSave')
@@ -55,4 +55,41 @@ saveButton.addEventListener('click', function() {
   })
 
 
+  const infoButton = document.getElementById('js-nutritional-info-icon');
+  const flipCard = document.querySelector('.flip-card-inner');
+  const backButton = document.getElementById('js-backButton');
+  
+
+  infoButton.addEventListener('click', () => {
+
+    function changeFlipCardClass() {
+      const flipCard = document.querySelector('.flip-card-inner');
+      flipCard.classList.add("flip-card-anim");
+    } 
+
+    function hideImage(){
+      const recipeImage = document.querySelector('.js-recipe-image-front');
+      recipeImage.classList.add("display-none");
+    }
+
+    changeFlipCardClass();
+    setTimeout(hideImage, 300); 
+
+  });
+  
+  backButton.addEventListener('click', () => {
+
+    function changeFlipCardClassBack(){
+      const flipCard = document.querySelector('.flip-card-inner');
+      flipCard.classList.toggle("flip-card-anim");
+    }
+    changeFlipCardClassBack();
+    function showImage(){
+      const recipeImage = document.querySelector('.js-recipe-image-front');
+      recipeImage.classList.remove("display-none");
+    }
+
+    showImage();
+
+  });
   
