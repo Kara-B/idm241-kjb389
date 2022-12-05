@@ -1,0 +1,32 @@
+*{
+    border: none;
+}
+body{
+    background-color: #ffffec;
+
+}
+h1{
+    text-align: center;
+}
+
+
+  .header { grid-area: 1 / 2 / 2 / 3; }
+
+  .heroImg {
+    display:grid;
+    justify-self: center;
+    align-content: center;
+    width:70%;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .overview { grid-area: 3 / 2 / 5 / 3; }
+
+  .contextAndChallengeTitle { grid-area: 5 / 2 / 6 / 3 }
+
+ 
+ .processAndInsightTitle { grid-area: 9 / 2 / 10 / 3; }

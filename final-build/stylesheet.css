@@ -410,10 +410,22 @@ a {
     left: 50%;
     }
     .recipeCard {
-        display: block;
+   
         box-shadow: 0 0 10px  rgba(76, 76, 76, 0.763);
         margin: 1rem 20px;
         width: 350px;
     }
+
+}
+
+@media only screen and (min-width: 1678px) {
+
+
+    .absoluteDiv {
+        position: absolute;
+        top: 90%
+    }
+
+
 
 }
