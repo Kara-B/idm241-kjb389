@@ -1,32 +1,86 @@
-*{
-    border: none;
-}
-body{
-    background-color: #ffffec;
-
-}
-h1{
-    text-align: center;
+@font-face {
+  font-family: Iowan-Old-Style;
+  src: url(fonts/Iowan-Old-Style.woff2) format('woff2');
+  font-weight: normal ;
+  font-size: normal;
 }
 
+:root {
+  --bright-red: #CF021A ;
+  --navy-blue: #1A2734;
+  --lovely-gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(145,23,251,1) 0%, rgba(255,76,0,1) 100%);
+}
 
-  .header { grid-area: 1 / 2 / 2 / 3; }
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
 
-  .heroImg {
-    display:grid;
-    justify-self: center;
-    align-content: center;
-    width:70%;
-  }
+h1 {
+  font-family: Noto Sans JP;
+  color: white;
+  font-size: 3rem;
+}
 
-  .responsive {
-    width: 100%;
-    height: auto;
-  }
+.hero {
+  align-items: center;
+  background-color: var(--navy-blue);
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  height: 200px
+}
 
-  .overview { grid-area: 3 / 2 / 5 / 3; }
+.JOClogo{
+  max-width: 150px;
+}
+.smallerHero {
+  max-width: 80%;
+  align-self: flex-end;
+}
 
-  .contextAndChallengeTitle { grid-area: 5 / 2 / 6 / 3 }
+.subHeading {
+  background-color: var(--bright-red);
+  border-radius: 30px;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  width: fit-content;
+}
 
- 
- .processAndInsightTitle { grid-area: 9 / 2 / 10 / 3; }
+.toolsUsed {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.toolsUsed h4 {
+  font-family: Noto Sans JP;
+  font-size: 1rem;
+}
+
+.tool {
+  border-radius: 50em;
+  border: 4px solid var(--bright-red);
+  font-family: Iowan-Old-Style;
+  font-size: .8rem;
+  margin: 1rem;
+  padding: 1rem;
+  width: fit-content;
+}
+
+.timeframe {
+ background-color: var(--bright-red);
+ border-radius: 30px;
+ color: white;
+ font-family: Iowan-Old-Style;
+ font-size: 1rem;
+ margin: 1rem;
+ padding: 1rem;
+ width: fit-content;
+}
