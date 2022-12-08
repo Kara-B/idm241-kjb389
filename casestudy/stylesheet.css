@@ -8,7 +8,7 @@
 :root {
   --bright-red: #CF021A ;
   --navy-blue: #1A2734;
-  --lovely-gradient: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(145,23,251,1) 0%, rgba(255,76,0,1) 100%);
+  --light-red: #FF9999;
 }
 
 * {
@@ -17,10 +17,37 @@
   margin: 0;
 }
 
+p {
+  font-family: Iowan-Old-Style;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--navy-blue);
+  justify-self: center;
+}
+
+
 h1 {
   font-family: Noto Sans JP;
   color: white;
   font-size: 3rem;
+}
+
+.placeholder {
+  color: red;
+  font-weight: bolder;
+  padding: .5rem;
+  border: 2px solid red;
+  width: fit-content;
+  margin: .5rem;
+}
+
+.fullHero{
+  display: grid;
+  grid-template-rows: 86px 86px 60px ;
 }
 
 .hero {
@@ -36,7 +63,7 @@ h1 {
   max-width: 150px;
 }
 .smallerHero {
-  max-width: 80%;
+  width: 14%;
   align-self: flex-end;
 }
 
@@ -47,9 +74,7 @@ h1 {
   font-size: 1.5rem;
   margin: 0 auto;
   padding: 1rem;
-  position: absolute;
-  left: 40%;
-  top: 20%;
+  grid-row: 3/3;
   width: fit-content;
 }
 
@@ -66,12 +91,14 @@ h1 {
 
 .tool {
   border-radius: 50em;
-  border: 4px solid var(--bright-red);
+  border: 3px solid var(--bright-red);
   font-family: Iowan-Old-Style;
   font-size: .8rem;
   margin: 1rem;
-  padding: 1rem;
+  padding: .5rem;
   width: fit-content;
+  min-width: 100px;
+  text-align: center ;
 }
 
 .timeframe {
@@ -81,6 +108,225 @@ h1 {
  font-family: Iowan-Old-Style;
  font-size: 1rem;
  margin: 1rem;
- padding: 1rem;
+ padding: .5rem;
  width: fit-content;
 }
+
+/* button {
+  background-color: transparent;
+  border: 2px solid var(--navy-blue);
+  border-radius: 30px;
+  font-size: 1.2rem;
+
+  
+  width: fit-content;
+} */
+
+/* CSS */
+.button {
+  font-family: Noto Sans JP;
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 1rem;
+  border: 1px solid var(--navy-blue);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.button:after {
+  content: "";
+  background-color: var(--light-red);
+  border-radius: 30px;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button:hover:after {
+  top: 0px;
+  left: 0px;
+  background-color: var(--bright-red);
+}
+
+.button:hover {
+  color: white;
+  border-color: var(--bright-red);
+}
+
+/* content styles */
+
+
+
+.container {
+  display: grid;
+  padding: 0 2rem ;
+}
+
+.overviewSection {
+  display: grid;
+  grid-template-columns: 20% 20% 40%;
+  grid-template-rows: 20% 80%;
+  line-height: 1.5rem;
+  align-items: center;
+
+}
+
+.overviewHeading {
+  font-family: Noto Sans JP;
+  grid-column: 2/3;
+  margin: 1rem;
+  width: fit-content;
+}
+
+.redDivider{
+  border-top: 4px solid var(--bright-red);
+  margin: 1.5rem auto;
+  width: 80%;
+}
+
+.sectionHeading{
+  font-family: Noto Sans JP;
+  /* border: 4px solid var(--navy-blue); */
+
+}
+
+.overviewDetails {
+  background-color: var(--navy-blue);
+  border-radius: 20px;
+  color: white;
+  font-family: Iowan-Old-Style;
+  font-size: 1rem;
+  grid-row: 3/2;
+  grid-column: 2/4;
+  padding: 1.5rem;
+}
+.resultsSubsection{
+  background-color: var(--navy-blue);
+  color: white;
+}
+
+.section{
+  display: grid;
+  padding: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+} 
+
+.section h3 {
+  font-family: Noto Sans JP;
+  margin: 0 0 .5rem ;
+}
+
+.subsection{
+  border: 2px solid var(--navy-blue);
+  border-radius: 20px;
+  display: grid;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.description {
+  background-color: var(--bright-red);
+  border-radius: 15px;
+  color: white;
+  font-family: Iowan-Old-Style;
+  margin: 1rem auto ;
+  padding: 1rem;
+  width: fit-content;
+}
+
+.interactionsAnatomy {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.betaWireframes {
+  width: 20%;
+  justify-self: center;
+}
+
+.resultsButton {
+  margin: auto 0;
+}
+
+.subsectionDecision img {
+  grid-column: 1/1;
+  max-width: 30%;
+  justify-self: center;
+} 
+
+
+.subsectionAlpha img{
+  width: 40%;
+  justify-self: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+.hero h1 {
+grid-row: 1/1;
+font-size: 35px;
+}
+
+.smallerHero {
+  width: 177px;
+}
+
+}
+@media only screen and (max-width: 600px) {
+
+  p{
+    padding: .5rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .overviewSection {
+    grid-template-columns: 1fr;
+  }
+  .hero{
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .smallerHero {
+    display: none;
+  }
+
+  .toolsUsed {
+    flex-direction: column;
+  }
+  .tool {
+    width: 150px;
+    text-align: center;
+  }
+  
+.originalButton {
+  margin-top: 2rem;
+}
+
+.subsectionAlpha img{
+  display: none;
+}
+
+.interactionsAnatomy {
+  width: 100%;
+  margin: 1rem auto;
+}
+.subsectionDecision img {
+  grid-column: 1/1;
+  max-width: 70%;
+  justify-self: center;
+} 
+
+  }
